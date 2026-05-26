@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma page – Séance 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seance3_style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="active">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1 id="titre-principal">Ma page interactive</h1>
+        <p class="sous-titre">Séance 3 – Spécialité NSI</p>
+    </header>
+
+    <main class="container">
+        <section class="section" id="section-a">
+            <div class="section-icon">🎨</div>
+            <h2>Exercice A – Couleur de fond</h2>
+            <p>Alternez la couleur de fond du site entre un mode clair et un mode sombre en un clic en fonction de ce que vous préfèrez (sombre plus agréable pour les yeux ;) ).</p>
+            <button id="btn-couleur">Changer la couleur</button>
+        </section>
+
+        <section class="section" id="section-b">
+            <div class="section-icon">🔢</div>
+            <h2>Exercice B – Le Compteur</h2>
+            <p>Utilisez les commandes ci-dessous pour ajuster la valeur (minimum : 0).</p>
+            
+            <div class="compteur-container">
+                <button id="btn-moins" class="btn-circle">−</button>
+                <span id="compteur">0</span>
+                <button id="btn-plus" class="btn-circle">+</button>
+            </div>
+        </section>
+
+        <section class="section" id="section-c">
+            <div class="section-icon">💬</div>
+            <h2>Exercice C – Champ interactif</h2>
+            <p>Saisissez un message pour l'afficher instantanément sur la page et donner votre appréciation sur mon travail par exemple :D.</p>
+            
+            <div class="input-group">
+                <input type="text" id="saisie" placeholder="Écrivez votre message ici...">
+                <button id="btn-valider">Valider</button>
+            </div>
+            <p id="affichage"></p>
+        </section>
+
+        <section class="section" id="section-fil-rouge">
+            <div class="section-icon">🚀</div>
+            <h2>Activité 2 – Fil Rouge</h2>
+            <p>Mode sombre plus poussé pour les cas spéciaux ou préférences :</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Fait par <span>Eliot</span> (long à faire) — <span id="annee"></span></p>
+    </footer>
+
+    <script src="script (2).js"></script>
+</body>
+</html>
