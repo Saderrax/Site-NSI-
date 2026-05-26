@@ -1,0 +1,211 @@
+/* --- CONFIGURATION & VARIABLES -------------------------------------------- */
+:root {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(255, 255, 255, 0.5);
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    
+    --primary: #2c3e50;
+    --primary-hover: #3d5a73;
+    --danger: #ef4444;
+    --danger-hover: #dc2626;
+    --success: #27ae60;
+    
+    --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* --- THEME SOMBRE (ACTIVÉ PAR LA CLASSE DARK-MODE) ----------------------- */
+.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --card-bg: rgba(30, 41, 59, 0.8);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-main: #e0e0e0;
+    --text-muted: #94a3b8;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- BASE ----------------------------------------------------------------- */
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- NAVIGATION ----------------------------------------------------------- */
+.navbar {
+    background: var(--primary);
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.navbar a:hover, .navbar a.active {
+    background: var(--primary-hover);
+}
+
+/* --- EN-TÊTE -------------------------------------------------------------- */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 0 0 10px 0;
+}
+
+.sous-titre {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- SECTIONS (CARDS) ----------------------------------------------------- */
+.section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.section:hover {
+    transform: translateY(-3px);
+}
+
+.section-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0 0 20px 0;
+}
+
+/* --- BOUTONS -------------------------------------------------------------- */
+button {
+    font-family: inherit;
+    font-weight: 600;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+/* --- COMPTEUR (EXERCICE B) ----------------------------------------------- */
+.compteur-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+#btn-moins {
+    background: var(--danger);
+}
+#btn-moins:hover {
+    background: var(--danger-hover);
+}
+
+#compteur {
+    font-size: 2rem;
+    font-weight: 700;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* --- INTERACTIF (EXERCICE C) ---------------------------------------------- */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    font-family: inherit;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--text-muted);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-main);
+    outline: none;
+    width: 250px;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary);
+}
+
+#affichage {
+    margin: 15px 0 0 0;
+    font-weight: 600;
+    color: var(--success);
+    font-style: italic;
+}
+
+/* --- FOOTER --------------------------------------------------------------- */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    font-size: 0.9rem;
+}
